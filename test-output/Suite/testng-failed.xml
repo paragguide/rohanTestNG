@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login(failed)">
+    <parameter name="reportname" value="LoginReport"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="testname" value="LoginTest"/>
+    <parameter name="url" value="https://www.amazon.in"/>
+    <parameter name="key" value="true"/>
+    <classes>
+      <class name="testcases.LoginTest">
+        <methods>
+          <include name="validatepassword"/>
+          <include name="beforeTest"/>
+          <include name="validateuserid"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- testcases.LoginTest -->
+      <class name="testcases.ProductSearchTest">
+        <methods>
+          <include name="search" invocation-numbers="1 2"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="addtokart"/>
+        </methods>
+      </class> <!-- testcases.ProductSearchTest -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Suite] -->
